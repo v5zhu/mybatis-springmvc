@@ -7,9 +7,9 @@
     </appender>
 
     <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/dubbo.log</file>
+        <file>logs/distribute.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>logs/dubbo.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>logs/distribute.%d{yyyy-MM-dd}.log</fileNamePattern>
         </rollingPolicy>
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} [%L] - %msg%n</pattern>
@@ -22,7 +22,7 @@
     <!--log4jdbc -->
     <logger name="jdbc.sqltiming" level="INFO"/>
 
-    <root level="INFO">
+    <root level="debug">
         <appender-ref ref="console" />
         <appender-ref ref="rollingFile" />
     </root>

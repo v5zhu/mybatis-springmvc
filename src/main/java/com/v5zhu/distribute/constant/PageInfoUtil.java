@@ -1,4 +1,4 @@
-package constant;
+package com.v5zhu.distribute.constant;
 
 import java.io.Serializable;
 import java.util.List;

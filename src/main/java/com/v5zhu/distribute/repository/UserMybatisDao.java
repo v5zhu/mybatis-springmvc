@@ -1,8 +1,8 @@
-package mybatis;
+package com.v5zhu.distribute.repository;
 
 
-import com.v5zhu.dubbo.commons.repository.MyBatisRepository;
-import com.v5zhu.dubbo.po.entity.User;
+import com.v5zhu.distribute.entity.User;
+import com.v5zhu.distribute.repository.MyBatisRepository;
 
 /**
  * Created by zhuxl on 2015/5/20.

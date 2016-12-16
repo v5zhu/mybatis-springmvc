@@ -1,10 +1,10 @@
-package impl;
+package com.v5zhu.distribute.api.impl;
 
 
-import com.v5zhu.dubbo.api.UserService;
-import com.v5zhu.dubbo.dao.repository.mybatis.UserMybatisDao;
-import com.v5zhu.dubbo.dto.UserDto;
-import com.v5zhu.dubbo.po.entity.User;
+import com.v5zhu.distribute.api.UserService;
+import com.v5zhu.distribute.dto.UserDto;
+import com.v5zhu.distribute.entity.User;
+import com.v5zhu.distribute.repository.UserMybatisDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

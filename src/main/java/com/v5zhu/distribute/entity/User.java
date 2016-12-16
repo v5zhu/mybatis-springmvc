@@ -1,9 +1,9 @@
-package dto;
+package com.v5zhu.distribute.entity;
 
 /**
  * Created by zhuxl@paxsz.com on 2016/7/25.
  */
-public class UserDto implements java.io.Serializable{
+public class User {
     private Long id;
     private String loginName;
     private String password;

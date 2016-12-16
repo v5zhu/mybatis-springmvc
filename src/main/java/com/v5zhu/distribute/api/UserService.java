@@ -1,6 +1,6 @@
-package api;
+package com.v5zhu.distribute.api;
 
-import dto.UserDto;
+import com.v5zhu.distribute.dto.UserDto;
 
 /**
 * Created by zhuxl on 2015/5/20.

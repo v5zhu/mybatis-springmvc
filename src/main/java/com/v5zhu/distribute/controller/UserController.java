@@ -1,8 +1,8 @@
-package com.v5zhu.dubbo.consumer.controller;
+package com.v5zhu.distribute.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.v5zhu.dubbo.api.UserService;
-import com.v5zhu.dubbo.dto.UserDto;
+import com.v5zhu.distribute.api.UserService;
+import com.v5zhu.distribute.dto.UserDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @SuppressWarnings("ALL")
 @Controller
-@RequestMapping(value = "/api/v2/")
+@RequestMapping(value = "/com/v5zhu/distribute/api/v2/")
 public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+<!DOCTYPE mapper PUBLIC "-//com.v5zhu.distribute.mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace必须指向Dao接口 -->
-<mapper namespace="com.v5zhu.dubbo.dao.repository.mybatis.UserMybatisDao">
+<mapper namespace="com.v5zhu.distribute.repository.UserMybatisDao">
     <!--查询结果不包含app列表-->
-    <resultMap id="UserMap" type="com.v5zhu.dubbo.po.entity.User">
+    <resultMap id="UserMap" type="com.v5zhu.distribute.entity.User">
 
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="loginName" column="login_name" jdbcType="VARCHAR"/>
@@ -15,15 +15,15 @@
 
 
     <select id="findByLoginName" resultMap="UserMap" parameterType="string">
-      select * from user where login_name=#{0} AND deleted=0;
+      select * from t_b_user where login_name=#{0} AND deleted=0;
     </select>
-    <insert id="createUser" parameterType="com.v5zhu.dubbo.po.entity.User">
+    <insert id="createUser" parameterType="com.v5zhu.distribute.entity.User">
         INSERT  INTO
-        user(login_name,password,email,phone,deleted)
+        t_b_user(login_name,password,email,phone,deleted)
         VALUES(#{loginName},#{password},#{email},#{phone},#{deleted})
     </insert>
-    <update id="modifyUser" parameterType="com.v5zhu.dubbo.po.entity.User">
-        UPDATE user
+    <update id="modifyUser" parameterType="com.v5zhu.distribute.entity.User">
+        UPDATE t_b_user
         <set>
             login_name=#{loginName},
             password=#{password},
@@ -34,7 +34,7 @@
         WHERE id=#{id}
     </update>
     <delete id="deleteUser" parameterType="java.lang.Long">
-        UPDATE user
+        UPDATE t_b_user
         <set>
             deleted=1
         </set>
