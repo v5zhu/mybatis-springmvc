@@ -10,13 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by LONG on 12/16/2016.
  */
-public class CommonInterceptor implements HandlerInterceptor {
+public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        UserDto userDto= (UserDto) request.getSession().getAttribute("user");
-        if(userDto==null){
-            return false;
-        }
         System.out.println("------------preHandle------------");
         return true;
     }

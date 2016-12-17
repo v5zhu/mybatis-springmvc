@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @SuppressWarnings("ALL")
 @Controller
-@RequestMapping(value = "/api/v1")
+@RequestMapping(value = "/")
 public class LoginController {
     private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 

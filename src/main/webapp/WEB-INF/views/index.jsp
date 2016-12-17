@@ -32,6 +32,7 @@
             <div class="md-col-4"></div>
             <div class="md-col-4">
                 <button type="button" id="loginBtn" class="form-control">LOGIN</button>
+                <a href="/api/v1/user?loginName=v5zhu">TEST CACHE</a>
             </div>
         </div>
         <div id="error"></div>
@@ -46,7 +47,7 @@
     $(function () {
         $("#loginBtn").click(function () {
             $.ajax({
-                url: '${ctx}/api/v1/login',
+                url: '${ctx}/login',
                 data: JSON.stringify({
                     "loginName": $("#loginName").val(),
                     "password": $("#password").val()
