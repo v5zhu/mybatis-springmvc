@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @SuppressWarnings("ALL")
 @Controller
-@RequestMapping(value = "/com/v5zhu/distribute/api/v2/")
+@RequestMapping(value = "/api/v1/")
 public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
