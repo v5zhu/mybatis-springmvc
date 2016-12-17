@@ -1,0 +1,26 @@
+/* header */
+#header {margin-bottom:15px;}
+
+#header h1 a {
+	color: #428bca;
+	text-decoration: none
+}
+
+#header h1 small {color: #428bca;}
+
+/* footer */
+#footer {
+	margin-top: 15px;
+	padding: 15px 0px 0px 0px;
+	font-size: 95%;
+	text-align: center;
+	border-top: 2px solid #428bca;
+}
+
+#footer a {color: #999;}
+.checkbox { display: none; }
+.trigger {cursor: pointer;position: relative;width: 40px; height: 20px;background: #cac6c6;border:1px solid #c5c3c3;border-radius:10px;overflow: hidden;-webkit-transition: background .15s linear;}
+.checkbox[checked="checked"] + .trigger { background: #0ddb14;border:0;border-radius: 10px; }
+.trigger:before {content: '';position: absolute;top: 0; left: 0; bottom: 0;width: 19px; height: 18px;margin: auto;-webkit-transition: left .15s linear;background: #fff;border-radius: 50%;}
+.checkbox[checked="checked"] + .trigger:before { left: 19px; }
+

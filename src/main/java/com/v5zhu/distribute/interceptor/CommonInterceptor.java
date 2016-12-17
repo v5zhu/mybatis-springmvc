@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class CommonInterceptor implements HandlerInterceptor {
     @Override
-    public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse httpServletResponse, Object o) throws Exception {
         System.out.println("------------preHandle------------");
         return true;
     }

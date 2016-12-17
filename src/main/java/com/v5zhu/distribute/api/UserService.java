@@ -7,6 +7,12 @@ import com.v5zhu.distribute.dto.UserDto;
 */
 public interface UserService {
 
+    /**用户登录
+     * @param userDto
+     * @return
+     */
+    int login(UserDto userDto);
+
     /**根据用户名查询用户
      * @param loginName
      * @return

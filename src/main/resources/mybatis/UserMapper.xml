@@ -14,6 +14,9 @@
     </resultMap>
 
 
+    <select id="login" resultType="int" parameterType="com.v5zhu.distribute.entity.User">
+        select count(1) from t_b_user where login_name=#{loginName} AND password=#{password} AND deleted=0;
+    </select>
     <select id="findByLoginName" resultMap="UserMap" parameterType="string">
       select * from t_b_user where login_name=#{0} AND deleted=0;
     </select>

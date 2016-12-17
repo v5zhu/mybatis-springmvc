@@ -1,0 +1,11 @@
+<div ng-show="user">
+    <p>Welcome {{user.name}}</p>
+</div>
+
+<div ng-hide="user">
+    您还没有登录!
+    <p>
+        <a href="/login">登录</a> / <a href="/signup">注册</a>
+        <a href="/redis">Redis</a>
+    </p>
+</div>

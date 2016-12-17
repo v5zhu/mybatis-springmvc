@@ -11,18 +11,26 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by zhuxl@paxsz.com on 2016/7/27.
  */
 @SuppressWarnings("ALL")
 @Controller
-@RequestMapping(value = "/api/v1/")
+@RequestMapping(value = "/api/v1")
 public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private UserService userService;
+
+    @RequestMapping(method = RequestMethod.GET)
+    public String findByLoginName(HttpServletRequest request) {
+        return "index";
+    }
 
     @RequestMapping(value = "user", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
@@ -36,7 +44,7 @@ public class UserController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public ResponseEntity addUser(@RequestBody UserDto userDto) {
+    public ResponseEntity addUser(@RequestBody UserDto userDto, ModelAndView ui) {
         try {
             userService.createUser(userDto);
             JSONObject ok=new JSONObject();

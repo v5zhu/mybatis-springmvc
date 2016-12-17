@@ -23,6 +23,13 @@ public class UserServiceImpl implements UserService {
     UserMybatisDao userMybatisDao;
 
     @Override
+    public int login(UserDto userDto) {
+        User user=BeanMapper.map(userDto,User.class);
+        int count=userMybatisDao.login(user);
+        return count;
+    }
+
+    @Override
     public UserDto findByLoginName(String loginName) {
         User user=userMybatisDao.findByLoginName(loginName);
         if (user!=null)

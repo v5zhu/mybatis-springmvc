@@ -10,6 +10,9 @@ import com.v5zhu.distribute.repository.MyBatisRepository;
 
 @MyBatisRepository
 public interface UserMybatisDao {
+
+    int login(User user);
+
     User findByLoginName(String loginName);
 
     int createUser(User user);
